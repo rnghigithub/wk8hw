@@ -10,9 +10,10 @@ xhttps.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
         console.log(this.responseText);
         console.log(JSON.parse(this.responseText));
-
         const data = JSON.parse(this.responseText);
-
+        document.getElementById('director').innerHTML = data.Director;
+        document.getElementById('title').innerHTML = data.Title;
+        document.getElementById('runtime').innerHTML = data.Runtime;
         
 //#1 VALID (RFC 8259)Formatted JSON Data//
 {
@@ -60,7 +61,12 @@ xhttps.onreadystatechange = function () {
     }
 };
 
-const metascore = document.getElementById('metascore').innerHTML =data.metascore ;
  
 
 xhttps.open("GET", url, true);
+
+const button = document.getElementById('btn');
+button.addEventListener('click', () => {
+   getData();
+   document.getElementById('container').style.border = '2px solid #000';
+});
