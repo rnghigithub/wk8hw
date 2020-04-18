@@ -33,11 +33,11 @@ be used anymore on a live server.
 13. it creates an object from a constructor function like XMLHttpRequest 
 
 14.
-    1. It sets the new object's private property to be the constructor function external object. 
-    2.
-    3.
-    4.
-    5.
+    1. used to create an object from a constructor function like XMLHttpRequest()
+    2.sets the new object internal, inaccessible property to teh constructors function's external prototype object
+    3. executes the constructor function using the newly created object whenever this is mentioned
+    4. the new keyword makes the this keyword point to the newly created object
+    5. It returns this if the function does not return its own object.
 
 15.  xhttps.onreadystatechange = function () {
       if (this.readyState === 4 && this.status === 200) {

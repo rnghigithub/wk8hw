@@ -15,6 +15,7 @@ function getData() {
       }
     };   
     xhttps.open("GET", url, true);
+    xhttps.send();
  
    }
 
