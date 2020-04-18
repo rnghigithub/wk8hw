@@ -47,12 +47,10 @@ be used anymore on a live server.
 15. Using code from your project, give me an example of this being returned due to the use of the new keyword with XMLHttpRequest() to create an instance of the XMLHttpRequest Object.
 
 
-
-
 16.the XMLHttpRequest.open() method initializes a newly created request or re-initializes a pre-existing one
 
 
-17. Using code from your project, give me an example of XMLHttpRequest.open().
+17. xhttps.open("GET");
 
 
 18. Tell me what the values passed to the open() method are for, and give me the parameters they represent the values (aka arguments) of. 
@@ -65,5 +63,9 @@ You will have come across the information while reading the instructions for goi
 
 
 
-20. Tell me if there are any values passed to our send() method. 
-What optionally could be passed to the method, and why do we NOT have to pass this optional parameter/argument to our send() method?
+20. 
+the send() method accepts any parameter which lets you specify the request's body.  
+If the request method is GET or HEAD, the body parameter is ignored, request body is null. 
+The body parameter is not ignored with requests like PUT, this request modified the body 
+content. GET/HEAD do not.    
+
