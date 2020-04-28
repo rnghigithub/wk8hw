@@ -1,7 +1,7 @@
 function getData() {
     var movie = document.getElementById(`movie`).value;
     var container = document.getElementById(`container`);
-    var url = `http://www.omdbapi.com/?i=tt3896198&apikey=2efd3d52=${movie}`;
+    var url = `https://www.omdbapi.com/?i=tt3896198&apikey=2efd3d52=${movie}`;
     var xhttps = new XMLHttpRequest();       
 
     xhttps.onreadystatechange = function () {
