@@ -15,7 +15,7 @@ sever behind the scenes.
     5. JavaScript executes the page update
 
 
-6. The XMLHttpRequest object it the cores of AJAX
+6. The XMLHttpRequest object ia at the cores of AJAX
 
 7. XMLHttpRequest Object used to exchange data with a web server behind the scenes
 
@@ -23,8 +23,7 @@ sever behind the scenes.
 
 9.  var xhttps = new XMLHttpRequest();     
 
-10.An XMLHttpRequest() constructor must be called before any other. This is because http cannot
-be used anymore on a live server. 
+10.An XMLHttpRequest() constructor initializes a XMLHttpRequest() object. This must be called before any other methods.
 
 11. https is required for a live server like a website the link is not valid unless you have https:// in the beginning   
 
@@ -53,20 +52,20 @@ be used anymore on a live server.
 16.the XMLHttpRequest.open() method initializes a newly created request or re-initializes a pre-existing one
 
 
-17. xhttps.open("GET");
+17. xhttps.open("GET".url, true);
 
 
-18. Tell me what the values passed to the open() method are for, and give me the parameters they represent the values (aka arguments) of. 
-Hint: part of the answer may reside in the slide deck and inside the Related Resources links at the end of the deck, and part will reside in the README.md of the week 8 homework repository. 
-You will have come across the information while reading the instructions for going through the steps of building your project.
-
+18.
+values are passed to the XMLHttpRequest.open() method which include
+first parameter: GET, POST, PUT or DELETE
+second parameter: URL/DOMstring
+third parameter: Boolean by default (can be true/false), operates to perform true/false
 
 
 19.xhttps.send();
 
 
 20. 
-the send() method accepts any parameter which lets you specify the request's body.  
 If the request method is GET or HEAD, the body parameter is ignored, request body is null. 
 The body parameter is not ignored with requests like PUT, this request modified the body 
 content. GET/HEAD do not.    
